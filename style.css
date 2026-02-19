@@ -11,6 +11,13 @@
 body{
   background:var(--bg);
   padding-bottom:100px;
+  display:flex;
+  justify-content:center;
+}
+
+#app{
+  width:100%;
+  max-width:600px;
 }
 
 .header{
@@ -136,4 +143,5 @@ input,select{
 .step.active{
   color:var(--primary);
   font-weight:600;
+
 }
