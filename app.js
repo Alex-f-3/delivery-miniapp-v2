@@ -19,19 +19,11 @@ document.getElementById("adminBtn").classList.remove("hidden");
 document.getElementById("adminBtn").onclick=openAdmin;
 }
 
-const loadMenu=async()=>{
-try{
-const remote=await getMenu();
-if(!state.menu || remote.lastUpdate!==state.menu.lastUpdate){
-setState("menu",remote);
-render();
-}
-}catch{
-if(!state.menu){
-setState("menu",LOCAL_MENU);
-}
-render();
-}
+const loadMenu = async () => {
+  if (!state.menu) {
+    setState("menu", LOCAL_MENU);
+  }
+  render();
 };
 
 const render=()=>{
@@ -118,4 +110,5 @@ startTracking();
 
 setInterval(loadMenu,60000);
 loadMenu();
+
 updateCartUI();
