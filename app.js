@@ -71,9 +71,11 @@ document.getElementById("cartCount").innerText=state.cart.length;
 document.getElementById("cartFloatingBtn").classList.toggle("hidden",state.cart.length===0);
 };
 
-document.getElementById("cartFloatingBtn").onclick=()=>{
-const modal=document.getElementById("modalRoot");
-modal.innerHTML=`
+document.getElementById("cartFloatingBtn").onclick = () => {
+  console.log("OPEN CART CLICKED");   // ← добавить эту строку
+
+  const modal = document.getElementById("modalRoot");
+  modal.innerHTML = `
 <div class="modal">
 <div class="modal-content">
 <h3>Your Cart</h3>
@@ -127,6 +129,7 @@ setState("menu", LOCAL_MENU);
 loadMenu();
 
 updateCartUI();
+
 
 
 
