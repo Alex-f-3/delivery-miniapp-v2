@@ -55,10 +55,10 @@ card.innerHTML=`
 <div>${formatVND(i.price)}</div>
 <button ${!i.available?"disabled":""}>Add</button>
 `;
-card.querySelector("button").onclick=()=>{
-console.log("CLICKED:", i.name);
-addToCart(i);
-updateCartUI();
+card.onclick = () => {
+  console.log("CLICKED:", i.name);
+  addToCart(i);
+  updateCartUI();
 };
 section.appendChild(card);
 });
@@ -127,6 +127,7 @@ setState("menu", LOCAL_MENU);
 loadMenu();
 
 updateCartUI();
+
 
 
 
