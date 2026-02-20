@@ -1,4 +1,4 @@
-const BASE = "https://aleha.app.n8n.cloud/webhook";
+const BASE = "https://aleha.app.n8n.cloud/webhook-test/order";
 
 export const getMenu = () =>
   fetch(`${BASE}/menu`).then(r => r.json());
@@ -20,3 +20,4 @@ export const updateMenu = (menu) =>
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(menu)
   }).then(r => r.json());
+
