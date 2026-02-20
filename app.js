@@ -11,6 +11,8 @@ import { formatVND } from "./utils.js";
 loadState();
 
 const tg=window.Telegram.WebApp;
+console.log("INIT DATA RAW:", tg.initData);
+console.log("INIT DATA UNSAFE:", tg.initDataUnsafe);
 tg.ready();
 state.telegram=tg.initDataUnsafe.user;
 if(!state.telegram?.id){
@@ -116,5 +118,6 @@ setInterval(loadMenu,60000);
 loadMenu();
 
 updateCartUI();
+
 
 
