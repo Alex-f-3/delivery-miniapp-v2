@@ -114,10 +114,12 @@ main {
 .modal-content{
   background:white;
   width:95%;
-  max-height:90%;
-  overflow:auto;
+  height:90vh;
+  overflow-y:auto;
   border-radius:var(--radius);
   padding:20px;
+  display:flex;
+  flex-direction:column;
 }
 
 .hidden{display:none}
@@ -204,6 +206,11 @@ body {
   position: relative;
   z-index: 1;
 }
+
+.modal-content button.primary-btn{
+  margin-top:auto;
+}
+
 
 
 
