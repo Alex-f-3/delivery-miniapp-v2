@@ -13,6 +13,10 @@ loadState();
 const tg=window.Telegram.WebApp;
 tg.ready();
 state.telegram=tg.initDataUnsafe.user;
+if(!state.telegram?.id){
+  alert("Telegram ID not found");
+  throw new Error("Telegram ID missing");
+}
 
 if(isAdmin(state.telegram?.id)){
 document.getElementById("adminBtn").classList.remove("hidden");
@@ -112,4 +116,5 @@ setInterval(loadMenu,60000);
 loadMenu();
 
 updateCartUI();
+
 
