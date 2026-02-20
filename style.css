@@ -144,3 +144,37 @@ input,select{
 
 }
 
+/* FIX: компактный и ровный вид карточек в Telegram WebApp */
+#app{
+  padding:16px;
+  box-sizing:border-box;
+}
+
+.category{
+  margin: 0 0 20px 0;
+}
+
+.category h2{
+  font-size:28px;
+  margin:8px 0 12px 0;
+}
+
+.card{
+  background:white;
+  border-radius:12px;
+  padding:18px;
+  margin-bottom:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.12);
+  min-height:96px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* кнопка в карточке — аккуратно справа внизу */
+.card button{
+  margin-top:12px;
+  align-self:flex-end;
+}
+
+
