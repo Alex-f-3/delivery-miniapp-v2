@@ -120,6 +120,7 @@ const res=await postOrder(payload);
 setState("orderId",res.orderId);
 setState("status",res.status);
 clearCart();
+updateCartUI();
 modal.innerHTML="";
 startTracking();
 };
@@ -130,6 +131,7 @@ setState("menu", LOCAL_MENU);
 loadMenu();
 
 updateCartUI();
+
 
 
 
