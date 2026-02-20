@@ -28,6 +28,11 @@ body{
   align-items:center;
   box-shadow:0 2px 8px rgba(0,0,0,0.05);
   z-index:10;
+  height: auto;
+}
+
+main {
+  margin-top: 10px;
 }
 
 .logo{
@@ -182,6 +187,7 @@ input,select{
   margin-top:12px;
   align-self:flex-end;
 }
+
 
 
 
