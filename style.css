@@ -85,6 +85,12 @@ body{
   padding:16px 20px;
   font-size:16px;
   box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  z-index:1;
+}
+
+.category{
+  position:relative;
+  z-index:2;
 }
 
 .modal{
@@ -176,5 +182,6 @@ input,select{
   margin-top:12px;
   align-self:flex-end;
 }
+
 
 
