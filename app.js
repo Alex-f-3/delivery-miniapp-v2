@@ -35,6 +35,9 @@ const loadMenu = async () => {
 const render=()=>{
 const app=document.getElementById("app");
 app.innerHTML="";
+  
+console.log("MENU STATE:", state.menu);
+  
 CATEGORIES.forEach(cat=>{
 const items=state.menu.items.filter(i=>i.category===cat);
 if(!items.length) return;
@@ -120,6 +123,7 @@ setState("menu", LOCAL_MENU);
 loadMenu();
 
 updateCartUI();
+
 
 
 
