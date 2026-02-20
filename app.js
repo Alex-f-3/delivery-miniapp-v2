@@ -36,7 +36,7 @@ const render=()=>{
 const app=document.getElementById("app");
 app.innerHTML="";
   
-console.log("MENU STATE:", state.menu);
+ console.log("MENU STATE:", state.menu);
   
 CATEGORIES.forEach(cat=>{
 const items=state.menu.items.filter(i=>i.category===cat);
@@ -45,6 +45,9 @@ const section=document.createElement("div");
 section.className="category";
 section.innerHTML=`<h2>${cat}</h2>`;
 items.forEach(i=>{
+  
+  console.log("RENDER ITEM:", i.name);
+  
 const card=document.createElement("div");
 card.className="card "+(!i.available?"unavailable":"");
 card.innerHTML=`
@@ -123,6 +126,7 @@ setState("menu", LOCAL_MENU);
 loadMenu();
 
 updateCartUI();
+
 
 
 
