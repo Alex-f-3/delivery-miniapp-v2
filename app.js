@@ -116,9 +116,11 @@ startTracking();
 };
 
 setInterval(loadMenu,60000);
+setState("menu", LOCAL_MENU);
 loadMenu();
 
 updateCartUI();
+
 
 
 
