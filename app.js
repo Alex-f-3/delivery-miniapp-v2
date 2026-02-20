@@ -56,6 +56,7 @@ card.innerHTML=`
 <button ${!i.available?"disabled":""}>Add</button>
 `;
 card.querySelector("button").onclick=()=>{
+console.log("CLICKED:", i.name);
 addToCart(i);
 updateCartUI();
 };
@@ -126,6 +127,7 @@ setState("menu", LOCAL_MENU);
 loadMenu();
 
 updateCartUI();
+
 
 
 
