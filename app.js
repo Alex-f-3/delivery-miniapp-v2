@@ -96,6 +96,7 @@ const total=subtotal()+delivery;
 
 const payload={
 telegram_id: state.telegram?.id,
+initData: tg.initData,
 address:document.getElementById("address").value,
 district:option.value,
 cart:state.cart,
@@ -104,7 +105,7 @@ delivery,
 total,
 timestamp:Date.now()
 };
-
+  
 const res=await postOrder(payload);
 setState("orderId",res.orderId);
 setState("status",res.status);
@@ -118,6 +119,7 @@ setInterval(loadMenu,60000);
 loadMenu();
 
 updateCartUI();
+
 
 
 
