@@ -73,6 +73,7 @@ document.getElementById("cartFloatingBtn").classList.toggle("hidden",state.cart.
 
 document.getElementById("cartFloatingBtn").onclick = () => {
   console.log("OPEN CART CLICKED");   // ← добавить эту строку
+  console.log("CART STATE:", state.cart);
 
   const modal = document.getElementById("modalRoot");
   modal.innerHTML = `
@@ -129,6 +130,7 @@ setState("menu", LOCAL_MENU);
 loadMenu();
 
 updateCartUI();
+
 
 
 
