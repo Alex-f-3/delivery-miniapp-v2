@@ -81,7 +81,7 @@ document.getElementById("cartFloatingBtn").onclick = () => {
 <div class="modal-content">
 <h3>Your Cart</h3>
 ${state.cart.map(i=>`
-<div>${i.name} x${i.qty} - ${formatVND(i.price*i.qty)}</div>
+<div>${i.name} - ${formatVND(i.price)}</div>
 `).join("")}
 <hr/>
 <div>Subtotal: ${formatVND(subtotal())}</div>
@@ -130,6 +130,7 @@ setState("menu", LOCAL_MENU);
 loadMenu();
 
 updateCartUI();
+
 
 
 
