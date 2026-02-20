@@ -11,8 +11,6 @@
 body{
   background:var(--bg);
   padding-bottom:100px;
-  display:flex;
-  justify-content:center;
 }
 
 #app{
@@ -145,3 +143,4 @@ input,select{
   font-weight:600;
 
 }
+
