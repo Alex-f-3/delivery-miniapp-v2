@@ -183,5 +183,13 @@ input,select{
   align-self:flex-end;
 }
 
+body {
+  pointer-events: auto !important;
+}
+
+#app, .category, .card, .card button {
+  pointer-events: auto !important;
+}
+
 
 
