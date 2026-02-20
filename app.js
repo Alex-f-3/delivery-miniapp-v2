@@ -92,7 +92,7 @@ ${state.cart.map(i=>`
 <option value="Center" data-price="40000">Center - 40 000 VND</option>
 </select>
 <input id="address" placeholder="Delivery address"/>
-<button class="primary-btn" id="placeOrder">Place Order</button>
+<button class="primary-btn" id="placeOrder" type="button">Place Order</button>
 </div>
 </div>
 `;
@@ -131,6 +131,7 @@ setState("menu", LOCAL_MENU);
 loadMenu();
 
 updateCartUI();
+
 
 
 
