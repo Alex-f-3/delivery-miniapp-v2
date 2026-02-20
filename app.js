@@ -89,7 +89,7 @@ const delivery=+option.dataset.price;
 const total=subtotal()+delivery;
 
 const payload={
-telegram:state.telegram,
+telegram_id: state.telegram?.id,
 address:document.getElementById("address").value,
 district:option.value,
 cart:state.cart,
@@ -112,3 +112,4 @@ setInterval(loadMenu,60000);
 loadMenu();
 
 updateCartUI();
+
